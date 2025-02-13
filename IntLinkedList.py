@@ -1,11 +1,11 @@
 from typing import Optional
 
-class _Node:
+class _Node: #O(1)
   def __init__(self, data: int) -> None:
     self.data: int = data
     self.next: Optional[_Node] = None
 
-class Iterator:
+class Iterator: #O(1)
   def __init__(self, host: Optional[_Node]) -> None:
     self.__current = host
   
@@ -26,14 +26,11 @@ class Iterator:
 class IntLinkedList:
   def __init__(self) -> None:
     self.__head: Optional[_Node] = None
-    self.__tail: Optional[_Node] = None
     self.__size: int = 0
   
   def append(self, to_add: int) -> None:
-    to_append: _Node = _Node(to_add)
+    to_append: _Node = _Node(to_add) #O(1)
     self.__size += 1
-
-    self.__tail = to_append
 
     # List is currently empty
   
@@ -41,20 +38,15 @@ class IntLinkedList:
       self.__head = to_append
       return
     
-
-    
     # List has elements
     current = self.__head
-    while current.next is not None:
+    while current.next is not None: #O(n)
       current = current.next
     current.next = to_append
   
-  def prepend(self, to_add: int) -> None:
+  def prepend(self, to_add: int) -> None: #O(1)
     to_prepend: _Node = _Node(to_add)
     self.__size += 1
-
-    if self.__tail is None:
-      self.__tail = to_prepend
 
     prev_head = self.__head
     self.__head = to_prepend
@@ -95,7 +87,7 @@ class IntLinkedList:
       raise IndexError("Requested index out of range")
     
     current = self.__head
-    while key > 0 and isinstance(current.next, _Node):
+    while key > 0 and isinstance(current.next, _Node): #O(n)
       current = current.next
       key -= 1
     
