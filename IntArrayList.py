@@ -75,15 +75,14 @@ class IntArrayList:
   def insertion_sort(self) -> None:
     # Starting from the second item, sort the array
     for i in range(1, self.__size):
-      # Check if item to the left is larger, and if so swap them
+      # Check if item to the left is larger, and if so swap them 
       while i > 0 and self.__items[i] < self.__items[i-1]:
         self.swap_ints_at(i, i-1)
         i -= 1
 
 
-
-test: IntArrayList = IntArrayList()
-test2: IntArrayList = IntArrayList()
+# test: IntArrayList = IntArrayList()
+# test2: IntArrayList = IntArrayList()
 # test.append(2)
 # test.append(4)
 # test.append(8)
@@ -99,20 +98,20 @@ test2: IntArrayList = IntArrayList()
 #   # test2.append(i)
 # print("Done")
 
-test.append(15)
-test.append(7)
-test.append(8)
-test.append(9)
-test.append(12)
-test.append(3)
-test.append(1)
-test.append(-9)
-test.append(6)
-test.append(-234789561245123678)
+# test.append(15)
+# test.append(7)
+# test.append(8)
+# test.append(9)
+# test.append(12)
+# test.append(3)
+# test.append(1)
+# test.append(-9)
+# test.append(6)
+# test.append(-234789561245123678)
 
-print(f"Pre-sort: {test}")
-test.insertion_sort()
-print(f"Post-sort: {test}")
+# print(f"Pre-sort: {test}")
+# test.insertion_sort()
+# print(f"Post-sort: {test}")
 
 # test.prepend(25)
 # test.prepend(9)
