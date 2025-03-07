@@ -82,7 +82,7 @@ class IntArrayList:
 
 
 # test: IntArrayList = IntArrayList()
-# test2: IntArrayList = IntArrayList()
+test2: IntArrayList = IntArrayList()
 # test.append(2)
 # test.append(4)
 # test.append(8)
@@ -92,11 +92,11 @@ class IntArrayList:
 # for i in range(5):
 #   test.append(i)
 # print("Done")
-# test2.append(1)
-# for i in range(100000): #O(n^2)
-#   test2.prepend(i) #O(n)
-#   # test2.append(i)
-# print("Done")
+test2.append(1)
+for i in range(10000): #O(n^2)
+  test2.prepend(i) #O(n)
+  # test2.append(i)
+print("Done")
 
 # test.append(15)
 # test.append(7)

@@ -23,7 +23,7 @@ class BinaryTreeNode:
     self.right = temp
   
   def sum_even_nodes(self) -> int:
-    total = 0
+    total = 0 if self.data % 2 != 0 else self.data
 
     if not self.left and not self.right:
       if self.data % 2 == 0:
