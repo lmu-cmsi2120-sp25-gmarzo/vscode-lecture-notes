@@ -10,33 +10,33 @@ class BinaryTreeNode:
     self.left = None
     self.right = None
   
-  def invert_tree(self):
-    if not self.left and not self.right:
-      return
-    if self.left:
-      self.left.invert_tree()
-    if self.right:
-      self.right.invert_tree()
+  # def invert_tree(self):
+  #   if not self.left and not self.right:
+  #     return
+  #   if self.left:
+  #     self.left.invert_tree()
+  #   if self.right:
+  #     self.right.invert_tree()
     
-    temp = self.left
-    self.left = self.right
-    self.right = temp
+  #   temp = self.left
+  #   self.left = self.right
+  #   self.right = temp
   
-  def sum_even_nodes(self) -> int:
-    total = 0 if self.data % 2 != 0 else self.data
+  # def sum_even_nodes(self) -> int:
+  #   total = 0 if self.data % 2 != 0 else self.data
 
-    if not self.left and not self.right:
-      if self.data % 2 == 0:
-        return self.data
-      else:
-        return 0
+  #   if not self.left and not self.right:
+  #     if self.data % 2 == 0:
+  #       return self.data
+  #     else:
+  #       return 0
     
-    if self.left:
-      total += self.left.sum_even_nodes()
-    if self.right:
-      total += self.right.sum_even_nodes()
+  #   if self.left:
+  #     total += self.left.sum_even_nodes()
+  #   if self.right:
+  #     total += self.right.sum_even_nodes()
     
-    return total
+  #   return total
   
 root = BinaryTreeNode(0)
 root.left = BinaryTreeNode(1)
@@ -93,5 +93,5 @@ def in_order_print(node: Optional[BinaryTreeNode]) -> None:
 # print("Post-invert")
 # pre_order_print(root)
 # 2 1 5 4 9 0 6 8 3 7
-print(root.sum_even_nodes())
+# print(root.sum_even_nodes())
 
