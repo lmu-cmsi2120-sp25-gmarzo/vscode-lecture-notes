@@ -37,6 +37,6 @@ def mult_two(num: int|float) -> int|float:
   Returns:
   - num multiplied by 2
   """
-  return num * 3
+  return num * 2
 
 

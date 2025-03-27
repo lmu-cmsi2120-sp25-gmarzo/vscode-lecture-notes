@@ -24,7 +24,7 @@ def count_to_nfinity(n: int) -> None:
 # Constant: O(1)
 # Logarithmic: O(log(n))
 # Linear: O(n)
-# Log-linear: O(n * log(n))
+# Linearithmic: O(n * log(n))
 # Quadratic: O(n^2)
 
 def cookies(kids: int): # n + n^2(1 + c_1 + c_2) => O(n^2)
@@ -42,7 +42,6 @@ def count_down(n: int):
       i = i // 2
 
 count_down(10000000) 
-
 
 #O(n)
 #O(nlog(n))

@@ -58,6 +58,21 @@ class BST:
         # Case: right child exists
         current = current.right
 
+  def add_rec(self, to_add: int):
+    self.root = self._add_rec(self.root, to_add)
+
+  def _add_rec(self, node: BSTNode, to_add: int):
+
+    if node is None:
+      return BSTNode(to_add)
+  
+    if to_add < node.data:
+      node.left = self._add_rec(node.left, to_add)
+    elif to_add > node.data:
+      node.right = self._add_rec(node.right, to_add)
+    
+    return node
+
   def contains(self, query: int) -> bool:
     """
     Determines whether or not the given int query exists
@@ -101,4 +116,3 @@ tree.add(12)
 # print(tree.contains(1)) # False
 
 print(tree.get_sorted_list())
-
